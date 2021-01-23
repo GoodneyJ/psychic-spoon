@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap');
+
+/* General CSS rules */
+html, body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: white;
+    background-color: #161616;
+}
+
+#loading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    text-align: center;
+}
+
+#signature {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+/* weather-container */
+#weather-container {
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3rem;
+    padding-top: .1rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    background-color: #2e2e2e;
+    -webkit-box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.46); 
+    box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.46);
+}
+
+
+
+/* Ruleset for the CurrentDay/ForecastDay Components */
+.current-day-container {
+    animation: fadeIn ease 350ms;
+    display: flex;
+    width: 75%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border-radius: 15px;
+    justify-content: space-between;
+    background-color: #161616;
+}
+
+#img-wrapper {
+    margin-left: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#current-day-left {
+    display: flex;
+}
+
+#location-name, #location-time, #current-temp {
+    margin-top: .5rem;
+    margin-bottom: 0.5rem;
+}
+
+#left-info {
+    margin-left: 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#current-day-right {
+    margin-right: 1rem;
+    text-align: right;
+}
+
+#current-condition-text, #current-humidity, #current-wind-speed {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#range-slider {
+    text-align: center;
+}
+
+/* Rulesets for the WeatherCard component */
+#weather-card-container {
+    width: 75%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.weather-card {
+    text-align: center;
+}
+
+.weather-card-button {
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+    border-radius: 15px;
+    background-color: #414141;
+    transition: background-color 150ms linear;
+
+}
+
+.weather-card-button:hover {
+    background-color: #222222;
+    transition: background-color 150ms linear;
+}
+
+#date-header {
+    font-weight: 600;
+}
+
+.active {
+    font-weight: 500;
+    transition: background-color 150ms linear;
+    background-color: #161616;
+}
+
+.hidden {
+    display: none !important;
+    
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@media screen and (min-width: 360px) {
+    #weather-container {
+        width: 95%;
+    }
+
+    #weather-card-container {
+        width: 95%;
+    }
+
+    .current-day-container {
+        width: 95%;
+    }
+
+    .weather-card-button {
+        width: 27%;
+        padding: .5rem;
+    }
+
+}
+
+@media screen and (min-width: 1000px) {
+    #weather-container {
+        width: 50% ;
+    }
+
+    #weather-card-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .current-day-container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+}
